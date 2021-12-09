@@ -1,16 +1,17 @@
-const api_key = "vsXa4e4tzjd6sW3HOvDjKj8KvxEhLlpI";
+const activo = true;
 
-const httpCall = fetch(
-  `https://api.giphy.com/v1/gifs/random?api_key=${api_key}`
-);
+/*let msg = "";
 
-httpCall
-  .then((resp) => resp.json())
-  .then(({ data }) => {
-    const { url } = data.images.original;
-    const img = document.createElement("img");
-    img.src = url;
+ if (activo) {
+  msg = "Activo";
+} else {
+  msg = "Inactivo";
+}
 
-    document.body.append(img);
-  })
-  .catch(console.warn);
+console.log(msg); */
+
+/* const msg = (activo) ? 'Activo' : null; */
+
+const msg = activo && 'Activo';
+
+console.log(msg);
